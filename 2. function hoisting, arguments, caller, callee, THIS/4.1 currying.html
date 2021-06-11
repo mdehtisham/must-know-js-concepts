@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><title>Currying</title></head>
+<body><script>// invented by Moses Schönfinkel 
+// developed by and named after Haskell Curry
+function add(a,b){
+  if(!Number.isInteger(a)) throw 'illegal 1st arg. val'
+  if(!Number.isInteger(b)) throw 'illegal 2nd arg. val'
+  console.log(a+b)
+}
+function curry_add(a){
+  if(!Number.isInteger(a)) throw 'illegal 1st arg. val'
+  return function(b){
+    if(!Number.isInteger(b)) throw 'illegal 2nd arg. val'
+    console.log(a+b)
+  }
+}
+let step1 = curry_add(1)
+step1(2)
+step1(3)
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

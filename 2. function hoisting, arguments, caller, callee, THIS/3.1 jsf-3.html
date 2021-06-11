@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><title>Function</title></head>
+<body><script>// bind, apply and call
+let A = {
+    msg:'hello',
+    tell(){
+        setTimeout(function(){
+            console.log(this.msg)
+        }.bind(A),1000)
+    }
+}
+
+function test(arg1,arg2){
+    console.log(arg1,arg2)
+    console.log(this)
+}
+// let new_func = test.bind(A,'milk')
+// new_func('water')
+test.apply(A,['orange','juice'])
+test.call(A,'milk','shake')
+
+
+
+
+
+</script>
+</body>
+</html>
