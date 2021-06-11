@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>LET in FOR</title></head>
+<style>button{padding:20px;font-size:60px;margin:10px;}</style>
+<body>
+    <button>Apple</button>
+    <button>Banana</button>
+    <button>Craneberry</button>
+<script>
+
+// real life use of 
+
+// We are getting all the button in an array (HTMLCollection).
+let buttons = document.getElementsByTagName('button')
+
+
+for(let i=0; i<buttons.length; i++){ // if we use var here then value of i will be always 3.
+    buttons[i].addEventListener('click', ()=>console.log(buttons[i].innerHTML))
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Temporal Dead Zone</title></head>
+<body>
+<script>
+
+// Temporal Dead Zone means any variable declared with let or const can not be accessed before it's initialization, because it is not hoisted.
+
+
+// var a = 'var a in global scope'
+
+// if(true){
+//     // block scope
+//     a = 'new value set for global var a in block scope'
+//     let a = 'let a in block scope'
+//     console.log(a)
+// }
+
+var obj = {
+    a:999,
+    b:{
+        c:888
+    }
+}
+console.log(obj.b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

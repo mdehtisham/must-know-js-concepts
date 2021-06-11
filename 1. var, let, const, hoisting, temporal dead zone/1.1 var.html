@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>JS Variables: var</title></head>
+<body>
+<script>   
+// var or let(ES6+)
+var a = 'var a in global scope'
+
+function func(){
+    // func scope
+    var a = 'var a in func scope'
+    console.log(a)
+    var b = 'var b in func scope'
+}
+func()
+if(true){
+    // block scope
+    console.log(a)
+    let c = 'let c in block scope'
+}
+console.log(c)
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
