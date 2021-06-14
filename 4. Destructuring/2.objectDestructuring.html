@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Destructuring</title>
+</head>
+<body>
+  <h1>Test the code withing script tag in the console</h1>
+  
+  <script>
+    let obj = {
+      fruit: 'Apple',
+      vegetable: 'Potato',
+      diary: 'Cheese'
+    };
+
+    // To destructure the object we must ensure that ---------variable name should be same as the property name-----------
+    let {fruit, vegetable, diary} = obj;
+    // console.log(fruit, vegetable, diary) // Apple Potato Cheese
+    
+    // Order of the variable does not matter to destructuring the object.
+    // let {diary, fruit, vegetable} = obj;
+    
+    // ----------Number of variable does not have to same as the number of properties, we can only declare what we need-------------
+    // let {vegetable} = obj;
+
+
+    // ------------When we want to change the variable name from property name then we have to use key:value pair, key must be same as the property name---------------
+    // Here only value will be used as variable...
+
+    // let {vegetable: new_vegetable} = obj 
+    // console.log(new_vegetable)
+
+
+
+    // NESTED OBJECTS - we must match the pattern
+    let info = {
+      name: 'Tom', 
+      address: {
+        city: "Delhi",
+        street: "Chandni Chawk",
+        number: "23"
+      },
+      age: 32
+    }
+
+    let {name, address:{city, street, number}, age} = info
+    // address is used as key in above case so it will not get declared
+    // console.log(name, city, street, number, age) // Tom Delhi Chandni Chawk 23 32   
+
+
+
+
+  </script>
+</body>
+</html>
