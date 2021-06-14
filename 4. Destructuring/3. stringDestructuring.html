@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Destructuring</title>
+</head>
+<body>
+  <h1>Test the code withing script tag in the console</h1>
+  
+  <script>
+    // String can be destructured as array or object.
+    //Lets see string destructuring as array
+
+    let str = "Hello, there!"
+    // by using string destructuring as array, we can destructure the values of the string.
+    let [first, second, third, fourth, fifth] = str; 
+    // console.log(first, second, third, fourth, fifth) // H e l l o
+
+
+
+    // By using string destructuring as object, we can destructure properties or methods associated with the strings. e.g. below-
+    let {length} = str;
+    // console.log(length) // 13
+
+    let {concat, fontsize, indexOf} = str;
+    // console.log(concat, fontsize, indexOf); // return the function definition of these methods
+
+    
+
+
+
+  </script>
+</body>
+</html>
