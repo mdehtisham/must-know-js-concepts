@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Destructuring</title>
+</head>
+<body>
+  <h1>Test the code withing script tag in the console</h1>
+  
+  <script>
+    // numbers can not be destructured as an array, because it is not iterable
+
+    // numbers have the prototype property and that have some methods associated to it, so for the numbers we can only destructure those properties as object destructuring
+
+    let num = 123;
+
+    let {toString: make_number_into_string} = num;
+
+
+    // we can not destructure the boolean as array, we can only destructure the properties or methods from its prototype using object destructuring
+    let bool = true;
+
+    
+
+
+
+  </script>
+</body>
+</html>
