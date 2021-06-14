@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Argument Destructuring</title>
+</head>
+<body>
+  <h1>Test the code withing script tag in the console</h1>
+  
+  <script>
+    
+    let info_obj = {
+      brand: 'Nissan', model: 'GT-R', engine: 'Petrol', gearbox: 'Automatic'
+    }
+
+    let info_arr = ['Honda', 'NSX', 'Hybrid', 'Automatic']
+
+    // function car({brand="Default Brand", model="Default Model"}={}){ // here curly braces is used to destructure the variables of object argument
+    //   console.log(brand+' '+ model)
+    // }
+
+    // car(info_obj) // Nissan GT-R
+    // car() // Default Brand Default Model
+
+
+
+
+    function car([brand="Default Brand", model="Default Model"]=[]){ // here curly braces is used to destructure the variables of object argument
+      console.log(brand+' '+ model)
+    }
+
+    car(info_arr) // Honda NSX
+    car() // Default Brand Default Model
+
+  
+
+    
+
+
+
+  </script>
+</body>
+</html>
