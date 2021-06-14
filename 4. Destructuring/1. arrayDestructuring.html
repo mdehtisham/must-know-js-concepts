@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Destructuring</title>
+</head>
+<body>
+  <h1>Test the code withing script tag in the console</h1>
+  
+  <script>
+    // we have 4 elements in an array
+    let fruits = ['Apple', 'Banana', 'Cranberry', 'Durian'];
+    // we want to assign each array element into it's own variable we can use array destructuring
+    let [one, two, three, four] = fruits;
+
+    // let [one, two, three, four='Date'] = fruits; -> we can also set the default value..like here in the four variable.
+
+    // console.log(one, two, three, four) -> Apple Banana Cranberry Durian
+
+    // Note: key of successfull array destructuring is matching pattern, like what element we want in which variable, so the order of variables is very important. As long as left pattern is same as right pattern, all variables will receive the right values.
+
+    let furits2 = ['Apple', ['Banana', 'Cranberry'], 'Durian'];
+    let [first, [second, third], fourth] = furits2;
+    // console.log(first, second, third, fourth)
+
+    let numbers = [1,2,3,4,5];
+    let [num1, ...nums] = numbers;
+    // console.log(num1, nums) -> num1 gets value 1, and nums get rest of the values in an array due to rest operator.
+
+
+    // => If we want to access few values, we can skip values by comma
+    // let [num1, , , , num5] = numbers;
+    // console.log(num1, num5)
+
+
+  </script>
+</body>
+</html>
