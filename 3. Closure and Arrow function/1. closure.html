@@ -7,8 +7,20 @@
   <title>Closure</title>
 </head>
 <body>
+  <h1>Use the console to check the code written in script tag</h1>
   
+  <script>
+    function outer(){
+      let a = 'variable a from the outer function scope';
 
+      function inner(){
+        return a; // this is the second return
+      }
+      return inner; // this is the first return
+    }
+
+    let inner_func = outer()
+    console.log(inner_func())
   </script>
 </body>
 </html>
